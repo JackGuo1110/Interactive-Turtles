@@ -29,7 +29,7 @@ class KeyboardTurtle(Turtle):
     self.window.onkey(self.go_right, self.turn_right)
     self.window.onkey(self.go_left, self.turn_left)
     self.window.onkey(self.go_forward, self.straight)
-    self.window.onkey(self.go_backward, self.backward)
+    self.window.onkey(self.go_nstraight, self.backward)
 
 
     #sets up controlling variables (y not implemented)
@@ -44,7 +44,7 @@ class KeyboardTurtle(Turtle):
       print("crash")
       quit()
 
-  def go_backward(self):
+  def go_nstraight(self):
     self.backward + str(self.movement_speed)
     if self.check_collision(self.other_player):
       print("crash")
