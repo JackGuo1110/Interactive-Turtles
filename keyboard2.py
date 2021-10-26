@@ -1,6 +1,7 @@
+
 from turtle import Turtle
 
-class KeyboardTurtle(Turtle):
+class KeyboardTurtle2(Turtle):
   # our 'wrapper' class of the Turtle class
   def __init__(self, 
                window,  
@@ -8,7 +9,7 @@ class KeyboardTurtle(Turtle):
                backward = "Down",
                right = "Right", 
                left = "Left",
-               other_player = None, 
+               other_player = None,
                walls = None):
     # Runs Keyboard Turtle Constructor as well as the Turtle Constructor
     Turtle.__init__(self)
@@ -22,9 +23,10 @@ class KeyboardTurtle(Turtle):
     self.other_player = other_player
     self.walls = walls
 
+
     #set turtle starting states
     self.shape("turtle")
-    self.color("blue")
+    self.color("pink")
     self.penup()
 
     # Sets up keyboard command examples
@@ -42,8 +44,10 @@ class KeyboardTurtle(Turtle):
   # Movement Methods
   def go_forward(self):
     self.forward(self.movement_speed)
-    if self.check_collision(self.other_player):
-      print("you win! restart to play again")
+    if self.other_player != None:
+      for wall in self.walls:
+        if self.check_collision(self.other_player):
+                print("you win! restart to play again")
       quit()
 
   def go_nstraight(self):
@@ -81,4 +85,5 @@ class KeyboardTurtle(Turtle):
 
 
     # TODO: finish setting up the inputs (left and down)
+
     

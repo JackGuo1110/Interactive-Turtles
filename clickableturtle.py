@@ -3,9 +3,9 @@ from turtle import Turtle, Screen
 class ClickableTurtle(Turtle):
   # our 'wrapper' class of the Turtle class
   def __init__(self, 
-               name = "button", 
+               name = "What do I do?", 
                x = 0 , 
-               y = -100):
+               y = -175):
     # Runs Keyboard Turtle Constructor as well as the Turtle Constructor
     Turtle.__init__(self)
     
@@ -18,7 +18,7 @@ class ClickableTurtle(Turtle):
     #set turtle starting states
     self.shape("square")
     self.shapesize(1,3,1)
-    self.color("tan")
+    self.color("pink")
     self.penup()
     self.setx(self.x)
     self.sety(self.y)
@@ -35,7 +35,7 @@ class ClickableTurtle(Turtle):
   # tells what happens when button is clicked
   def click(self, x, y):
     # This is Placeholder:  What should this button do?
-    print ("Click")
+    print ("There are two turtles on the map, use wasd to control the first turtle and use the arrow keys to control the second turtle. Try to cath the other turtle without touching the moving objects. Have fun playing tag!")
 
   # TODO:  
   # 1) Change the button color 
